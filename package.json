@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "nodemon ./bin/www",
     "start": "npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all && node ./bin/www",
-    "new-start": "node ./bin/www"
+    "restart": "node ./bin/www"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
