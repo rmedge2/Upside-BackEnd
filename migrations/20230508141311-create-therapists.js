@@ -12,14 +12,14 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
-      specialities: {
+      specialties: {
         type: Sequelize.STRING
       },
-      available: {
-        type: Sequelize.BOOLEAN
-      },
       imgUrl: {
-        type: Sequelize.BOOLEAN 
+        type: Sequelize.STRING
+      },
+      isAvailable: {
+        type: Sequelize.BOOLEAN
       },
       createdAt: {
         allowNull: false,
