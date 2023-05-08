@@ -17,7 +17,7 @@ router.get('/search/', async (req, res) => {
     try {
         const searchString = req.body.search
         const list = await Therapists.findAll({
-            where: {specialities : {
+            where: {specialties : {
                 [Op.iLike]: '%' + searchString + '%'
             }}
         })
