@@ -13,9 +13,9 @@ router.get('/', async (req, res) => {
     }
 });
 // Search through list of therapists
-router.get('/search/', async (req, res) => {
+router.get('/search/:searchString', async (req, res) => {
     try {
-        const searchString = req.body.search
+        let searchString = req.params.searchString;
         const list = await Therapists.findAll({
             where: {specialties : {
                 [Op.iLike]: '%' + searchString + '%'
