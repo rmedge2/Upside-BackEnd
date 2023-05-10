@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {Op} = require('sequelize')
+const {Op} = require('sequelize');
 const { Therapists } = require('../models');
 
 // Get a list of all therapists
@@ -32,7 +32,7 @@ router.get('/:id', async (req, res) => {
     try {
         const therapist = await Therapists.findByPk(req.params.id);
         if (!therapist) {
-            res.status(404).json({ message: 'Error retrieving the therapist' })
+            res.status(404).json({ message: 'Therapist not found' })
         }
         else {
             res.json(therapist)
